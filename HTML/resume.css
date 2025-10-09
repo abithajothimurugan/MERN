@@ -1,0 +1,35 @@
+*{
+    font-size: 18px;
+    font-family: serif;
+}
+
+h1{
+    text-align: center;
+    font-size: 18px;
+}
+
+#info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub-head{
+    width: auto;
+    background-color: rgb(88, 88, 88);
+}
+
+table, th, td {
+    border: 1px solid black;
+    font-family: serif;
+    height: 50px;
+    border-collapse: collapse;
+}
+
+th,td{
+    padding: 2px;
+}
+
+ul li{
+    padding: 2px;
+}
+
