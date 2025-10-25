@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors</title>
+    <style>
+       
+/* Basic page styling */
+body {
+font-family: Arial, sans-serif;
+background: #f4f6f9;
+margin: 0;
+padding: 30px;
+}
+h1 {
+text-align: center;
+background: #1e293b;
+color: white;
+padding: 15px;
+border-radius: 10px;
+}
+section {
+background: white;
+border-radius: 10px;
+margin: 25px 0;
+padding: 20px;
+box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+h2 {
+color: #2563eb;
+margin-top: 0;
+border-bottom: 2px solid #2563eb;
+padding-bottom: 5px;
+}
+/* 1. Basic Selectors */
+* {
+box-sizing: border-box;
+}
+p {
+color: #111;
+}
+.example {
+color: green;
+}
+#unique {
+color: red;
+}
+/* 2. Combinators */
+div p {
+color: blue;
+} /* descendant */
+div > p {
+background: #0cc5e5;
+} /* child */
+h3 + p {
+color: purple;
+} /* adjacent sibling */
+h3 ~ p {
+border-left: 4px solid #f97316;
+padding-left: 8px;
+} /* general sibling */
+    </style>
+</head>
+
+<body>
+    <h1>CSS Selectors Playground</h1>
+<section>
+<h2>Basic Selectors</h2>
+<p>This is a normal paragraph.</p>
+<p class="example">This uses a
+<code>.class</code> selector.</p>
+
+<p id="unique">This uses an <code>#id</code>
+
+selector.</p>
+</section>
+<section>
+<h2>Combinator Selectors</h2>
+<div>
+    <p>Inside div (descendant)</p>
+<p>Direct child of div</p>
+</div>
+<h3>Heading</h3>
+<p>Adjacent sibling paragraph</p>
+<p>General sibling paragraph</p>
+</section>
+
+<section>
+<h2>Attribute Selectors</h2>
+<input type="text" placeholder="Text input" />
+<input type="email" placeholder="Email input"
+
+/>
+
+<img src="test.png" alt="demo image"
+
+title="demo picture" width="50" />
+
+<a href="https://nikaa.in/" title="demo
+
+link">Example HTTPS Link</a>
+</section>
+
+
+</body>
+</html>

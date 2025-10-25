@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.card{
+    background-color: black;
+    display: flex;
+    color: white;
+    gap: 30px; 
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+
+}
+
+.app1{
+    background-image: linear-gradient(35deg, rgb(17, 1, 8),rgb(25, 1, 14),
+        rgb(2, 79, 17));
+        padding: 100px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        height: 300px;
+        width: 300px;
+}
+
+.app2 {
+    background-image: linear-gradient(35deg, rgb(1, 0, 1), rgb(6, 1, 4),
+            rgb(158, 2, 2));
+    padding: 100px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    height: 300px;
+    width: 300px;
+}
+
+.app3 {
+    background-image: linear-gradient(35deg, rgb(9, 0, 0),black,
+            rgb(255, 119, 0));
+    padding: 100px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    height: 300px;
+    width: 300px;
+}
+
+.app4 {
+    background-image: linear-gradient(35deg, rgb(18, 2, 9), rgb(37, 17, 27),
+            blue);
+    padding: 100px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    height: 300px;
+    width: 300px;
+}
