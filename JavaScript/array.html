@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        //Level 1: Basics (Push, Pop, Shift, Unshift, Length,Join)
+        console.log("1. Create an array of 5 fruits. Add one more fruit at the end using push().");
+        let fruit = ["mango", "banana", "apple", "orange", "cherry", "pineapple"]
+        console.log(fruit.push("grapes"));
+        console.log(fruit)
+
+        console.log("2. Remove the last fruit from an array using pop().");
+        console.log(fruit.pop());
+        console.log(fruit)
+
+        console.log("4. Remove the first fruit using shift().");
+        console.log(fruit.shift());
+        console.log(fruit)
+
+        console.log("5. Find and display the length of the array.");
+        console.log(fruit.length);
+
+        console.log("6. Convert an array of fruits into a single string using join(", ").");
+        console.log(fruit.join(","));
+
+        console.log("7. Create an array of colors and print the last element using length- 1.");
+        let colors = ["pink", "blue", "red", "green", "yellow"]
+        console.log(colors[colors.length - 1]);
+
+        console.log("8 Create an array of 3 names, add two names using push(), and remove one using shift().");
+        let name = ["abi", "anu", "abarna"]
+        console.log(name.push("maha", "kavya"));
+        console.log(name);
+        console.log(name.shift());
+        console.log(name);
+
+        console.log("Use join() to print the sentence: I like apple,banana, orange");
+        let strarr = ["I like apple", "banana", "orange"]
+        console.log(strarr.join(","));
+
+        console.log("10.Combine push() and pop() to simulate adding and removing queue items.");
+        let queue = ["a", "b", "c"];
+        queue.push("d");
+        let remove = queue.reverse().pop();
+        console.log(remove);
+        queue.reverse()
+        console.log(queue);
+
+
+        //Level 2: Searching and Checking (indexOf,includes, concat)
+
+        console.log("11. Create an array of animals. Check if dog exists using includes().");
+        let animal = ["cat", "dog", "cow", "goat"]
+        console.log(animal.includes("dog"));
+
+        console.log("12. Find the position of cat in an array using indexOf().");
+        console.log(animal.indexOf("cat"));
+
+        console.log("13. Merge two arrays [1,2,3] and [4,5,6] using concat().");
+        let arr1 = [11, 6, 3], arr2 = [4, 45, 26]
+        let arr = arr1.concat(arr2);
+        console.log(arr);
+
+        console.log("14 Create two arrays — boys and girls, merge into students.");
+        let girl = ["rani", "veni"], boy = ["ram", "sri"];
+        let stud = girl.concat(boy);
+        console.log(stud);
+
+        console.log("15 Check if lion exists in an animal array; if not, add it.");
+        console.log(animal.includes("lion"));
+
+        console.log("16 Create an array of cities and check the index of Chennai");
+        let city = ["maduari", "chennai", "selam"]
+        console.log(city.indexOf("chennai"));
+
+        console.log("17 Merge three arrays [a,b], [c,d], [e,f] using concat().");
+        let a = ["a", "b"], b = ["c", "d"], c = ["e", "f"];
+        let res = a.concat(b).concat(c)
+        console.log(res);
+
+        console.log("18 Use includes() to check if watermelon is in the fruit array.");
+        console.log(fruit.includes("watermelon"));
+
+        console.log("19 Create a combined array of numbers and sort them (use concat() + sort()).");
+        arr = arr1.concat(arr2);
+        let combined = arr1.concat(arr2);
+        combined.sort((a, b) => a - b);
+        console.log(combined);
+
+        console.log("20 Join three small arrays of subjects into one array.");
+        let sub1 = ["c", "c++"], sub2 = ["HTML", "CSS"], sub3 = ["Python", "Java"]
+        let sub = sub1.concat(sub2).concat(sub3)
+        console.log(sub);
+
+        // "Level 3: Slicing and Splicing (slice, splice)";
+        console.log("21. Create an array [10, 20, 30, 40, 50]. Use slice(1, 4) and print result.");
+        arr = [10, 20, 30, 40, 50];
+        console.log(arr.slice(1, 4));
+
+        console.log("22. Remove banana from [apple, banana, cherry] using splice().");
+        console.log(fruit);
+        console.log(fruit.splice(0, 1));
+        console.log(fruit);
+
+        console.log("23. Insert grape between apple and cherry using splice().");
+        console.log(fruit.splice(0, 1, "grape"));
+        console.log(fruit);
+
+        console.log("24. Extract first 3 elements from [5,10,15,20,25] using slice().");
+        let num = [5, 10, 15, 20, 25];
+        console.log(num.slice(0, 3));
+
+        //25. Replace "dog" with "tiger" in ["cat", "dog", "lion"] using splice().
+        console.log(animal.splice(1, 1, "tiger"));
+        console.log(animal);
+
+        //26. Remove 2 middle items from [1,2,3,4,5] using splice().
+        num = [1, 2, 3, 4, 5]
+        console.log(num.splice(1, 2));
+        console.log(num);
+
+        //27. Add 2 new colors in between using splice().
+        console.log(colors);
+        console.log(colors.splice(2, 0, "skyblue", "balck"));
+        console.log(colors);
+
+        //28. Copy the last 2 items from an array using slice(-2).
+        console.log(colors.slice(-2));
+
+        //29. Clone an entire array using slice().
+        let clone = colors.slice();
+        console.log(clone);
+
+        //30. Create a copy of an array without changing the origina (demonstrate slice() immutability).
+        console.log("Create a copy of an array without changing the original (demonstrate slice() immutability).");
+
+        let copyFruits = fruit.slice();
+        copyFruits.push("apple");
+        console.log("Original array:", fruit);
+        console.log("Copied array:", copyFruits);
+        console.log("Original array:", fruit);
+
+        console.log("31. Use forEach() to print all numbers in [10,20,30,40].");
+        num = [10, 20, 30, 40];
+        num.forEach(element => {
+            console.log(element);
+        });
+
+        console.log("32. Use map() to double each number in [1,2,3,4,5].");
+
+        num = [1, 2, 3, 4, 5];
+        let doubled = num.map(n => n * 2);
+
+        console.log(doubled);
+
+        console.log("33. Use map() to convert an array of names to uppercase.");
+        name = ["abi", "kavi", "pavi"]
+        let uppercase = name.map(n => n.toUpperCase())
+        console.log(uppercase);
+
+        console.log("34. Use filter() to keep only even numbers from [10, 15, 20, 25, 30].");
+        num = [10, 15, 20, 25, 30]
+        res = num.filter((ele) => {
+            return ele % 2 == 0
+        })
+        console.log(res);
+
+        console.log("Filter out names that start with letter A from [Ajay, Bala, Anu, Deepa].");
+
+        let names = ['Ajay', 'Bala', 'Anu', 'Deepa'];
+        res = names.filter(ele => ele.startsWith('A'));
+
+        console.log(res);
+
+
+        console.log("36. Use forEach() to print “Student: <name>” for each student.");
+
+        name.forEach(Stdname => {
+            console.log("Student: " + Stdname);
+        });
+
+
+        console.log("Use map() to create a new array of squared values from  [2, 4, 6, 8].");
+        num = [2, 4, 6, 8];
+        let squared = num.map(num => num * num);
+        console.log(squared);
+
+        console.log("38. Filter out all negative numbers from [10, -5, 8, -3,12].");
+        num = [10, -5, 8, -3, 12]
+        let neg = num.filter(n => n <= 0)
+        console.log(neg);
+
+        console.log("39. Use map() to add “Mr./Ms.” before each name in an array.");
+        names = ['Ajay', 'Bala', 'Anu', 'Deepa'];
+        let updatedNames = names.map(name => "Mr./Ms. " + name);
+        console.log(updatedNames);
+
+        console.log("40. Filter the array of marks [40,55,75,90,35] to show only pass marks(≥50).");
+        let marks = [40, 55, 75, 90, 35]
+        let mark = marks.filter(n => n >= 50)
+        console.log(mark);
+
+        //Level 5: Advanced Operations (reduce, sort, reverse, find, some, every)
+
+        console.log("41. Use reduce() to find the sum of [5,10,15,20].");
+        num = [5, 10, 15, 20]
+        let sum = num.reduce((acc, num) => acc + num, 0);
+        console.log(sum);
+
+        console.log("42. Use reduce() to find the product of [2,3,4,5].");
+        num = [2, 3, 4, 5]
+        sum = num.reduce((acc, num) => acc * num, 1);
+        console.log(sum);
+
+        console.log("43. Sort [30, 10, 50, 20, 40] in ascending order using sort().");
+        let numbers = [30, 10, 50, 20, 40];
+        numbers.sort((a, b) => a - b);
+        console.log(numbers);
+
+        console.log("44. Reverse an array of numbers [1,2,3,4,5] using reverse().");
+        num = [1, 2, 3, 4, 5]
+        num.reverse()
+        console.log(num);
+
+        console.log("45. Use find() to get the first number greater than 50 from [10, 60, 30, 80, 40].");
+        num = [10, 60, 30, 80, 40];
+        let result = num.find((n) => n > 50);
+        console.log(result);
+
+        console.log("46. Use some() to check if any number is above 100 in [10, 50, 80, 30].");
+        num = [10, 50, 80, 30]
+        result = num.some((n) => n > 100);
+        console.log(result);
+
+        console.log("47. Use every() to check if all numbers are positive in [2, 4, 6, 8].");
+        numbers = [2, 4, 6, 8];
+        let allPositive = numbers.every((n) => n > 0);
+
+        console.log("Are all numbers positive?", allPositive);
+
+
+        console.log("48. Use sort() to arrange names alphabetically.");
+        name = ['Ajay', 'Bala', 'Anu', 'Deepa'];
+        name.sort()
+        console.log(name);
+
+        console.log("49. Use reverse() to show names in reverse alphabetical order.");
+        name.reverse()
+        console.log(name);
+
+        console.log("50. Combine filter() and reduce() to find the sum of only even numbers from [1, 2, 3, 4, 5, 6, 7, 8].");
+        numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+        let evenNumbers = numbers.filter((n) => n % 2 === 0);
+        sum = evenNumbers.reduce((acc, n) => acc + n, 0);
+        console.log("Even numbers:", evenNumbers);
+        console.log("Sum of even numbers:", sum);
+
+    </script>
+</body>
+
+</html>
