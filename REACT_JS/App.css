@@ -1,0 +1,216 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background */
+.main-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background-color: #f8f8fc;
+  /* clean neutral backdrop */
+  padding: 40px;
+}
+
+/* Card base */
+.card {
+  width: 260px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  text-align: center;
+  padding: 25px 20px;
+  transition: all 0.35s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  position: relative;
+  overflow: hidden;
+  border-top: 6px solid transparent;
+  /* dynamic top border per card */
+}
+
+/* Color variations for multiple cards */
+.card:nth-child(1) {
+  border-top-color: pink;
+  /* violet */
+}
+
+.card:nth-child(2) {
+  border-top-color: #0ea5e9;
+  /* teal/sky blue */
+}
+
+.card:nth-child(3) {
+  border-top-color: #f97316;
+  /* coral/orange */
+}
+
+.card:nth-child(4) {
+  border-top-color: #facc15;
+  /* golden yellow */
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image style */
+.card img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* Text content */
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #2c2c54;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Button styling */
+.card button {
+  background-color: #8b5cf6;
+  /* default violet button */
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Match button color with card theme */
+.card:nth-child(2) button {
+  background-color: #0ea5e9;
+}
+
+.card:nth-child(3) button {
+  background-color: #f97316;
+}
+
+.card:nth-child(4) button {
+  background-color: #facc15;
+  color: #3b2f00;
+}
+
+
+.card button:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Counter */
+
+.counter {
+  background-color: #082E33;
+  width: 350px;
+  padding: 20px;
+  margin-left: 500px;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  gap: 20px;
+}
+
+.btn button {
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  width: 100px;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.btn .green {
+  background-color: #ff9a8d;
+
+}
+
+.btn .red {
+  background-color: #aed6dc;
+}
+
+.state {
+  width: 400px;
+  margin: auto;
+  margin-top: 40px;
+  padding: 25px;
+  background:rgba(22, 236, 37, 0.786);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #ccc;
+  display: flex;
+  flex-direction: column;
+}
+
+.state input,
+select,
+textarea {
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.state h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.state button {
+  padding: 12px;
+    background: #7a0a93e7;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+
+}
+.state button:hover {
+  background:#af14d2ad;
+  cursor: pointer;
+}
+
+
+.state .result {
+  margin-top: 20px;
+  padding: 15px;
+  background: #e3ffe3;
+  border: 1px solid green;
+  border-radius: 5px;
+}
